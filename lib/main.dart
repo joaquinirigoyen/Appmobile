@@ -4,7 +4,7 @@ void main() {
   var app = MaterialApp(
     theme: ThemeData(
       primaryColor: Colors.orange,
-      accentColor: Colors.orange,
+      accentColor: Colors.grey,
     ),
     home: Scaffold(
       appBar: AppBar(
@@ -38,7 +38,7 @@ class NavegacionBoton extends StatelessWidget {
         // ignore: deprecated_member_use
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
-            icon: Icon(Icons.access_alarm_sharp),
+            icon: Icon(Icons.Icons.phonelink_ring_outlined),
             title: Text("Turnos telefonicos")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
@@ -54,6 +54,7 @@ class Botonflotante extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
         child: Icon(Icons.search),
+        backgroundColor: Colors.orange,
         onPressed: () {
           // print("no tiene uso todavia");
           Navigator.push(context,
