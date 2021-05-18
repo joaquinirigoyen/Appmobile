@@ -2,19 +2,24 @@ import 'package:flutter/material.dart';
 
 void main() {
   var app = MaterialApp(
+    theme: ThemeData(
+      primaryColor: Colors.orange,
+      accentColor: Colors.orange,
+    ),
     home: Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text("mi primera app"),
+          child: Text("Gimnasio EPET20"),
         ),
       ),
       body: Container(
         child: Center(
           child: Text(
-            "hello word",
+            "Pagina principal",
             style: TextStyle(fontSize: 40),
           ),
         ),
+        color:Colors.grey,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Botonflotante(),
@@ -34,11 +39,11 @@ class NavegacionBoton extends StatelessWidget {
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.access_alarm_sharp),
-            title: Text("Alarma")),
+            title: Text("Turnos telefonicos")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.ac_unit_outlined),
-            title: Text("hielo")),
+            title: Text("Covid")),
       ],
     );
   }
