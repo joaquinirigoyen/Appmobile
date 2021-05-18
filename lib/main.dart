@@ -68,7 +68,8 @@ class Pagina2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      floatingActionButton: Botonflotante(),
+       // de aca empezemos la segunda pagina asi vemos como seria las opciones a dar
+        floatingActionButton: Botonflotante(),
       bottomNavigationBar: NavegacionBoton(),
     );
   }
