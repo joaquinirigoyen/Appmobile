@@ -1,3 +1,4 @@
+import 'package:app_gym/Login_pagina.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,6 +26,19 @@ void main() {
   runApp(app);
 }
 
+class Myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: Loginpagina.id,
+      routes: {
+        Loginpagina.id: (context) => Loginpagina(),
+      },
+    );
+  }
+}
+
 class NavegacionBoton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,10 +48,12 @@ class NavegacionBoton extends StatelessWidget {
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.access_alarm_sharp),
+            // ignore: deprecated_member_use
             title: Text("Alarma")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.ac_unit_outlined),
+            // ignore: deprecated_member_use
             title: Text("hielo")),
       ],
     );
