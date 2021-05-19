@@ -30,6 +30,19 @@ void main() {
   runApp(app);
 }
 
+class Myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: Loginpagina.id,
+      routes: {
+        Loginpagina.id: (context) => Loginpagina(),
+      },
+    );
+  }
+}
+
 class NavegacionBoton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
