@@ -71,6 +71,28 @@ Widget _passwordTextField() {
     },
   );
 }
+Widget _bottonLogin() {
+  return StreamBuilder(
+    builder: (BuildContext context, AsyncSnapshot snapshot) {
+      // ignore: deprecated_member_use
+      return RaisedButton(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
+            child: Text(
+              'Iniciar Sesion',
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+          elevation: 15.0,
+          color: Colors.orange[600],
+          onPressed: () {});
+    },
+  );
+}
 
 
 
