@@ -55,7 +55,7 @@ class NavegacionBoton extends StatelessWidget {
             title: Text("Turnos telefonicos")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
-            icon: Icon(Icons.ac_unit_outlined),
+            icon: Icon(Icons.attribution_rounded),
             title: Text("Covid")),
       ],
     );
@@ -94,7 +94,6 @@ class Pagina2 extends StatelessWidget {
         ),
         color: Colors.grey,
       ),
-       // de aca empezemos la segunda pagina asi vemos como seria las opciones a dar
         floatingActionButton: Botonflotante(),
       bottomNavigationBar: NavegacionBoton(),
     );
