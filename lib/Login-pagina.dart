@@ -53,4 +53,24 @@ class _LoginpaginaState extends State<Loginpagina> {
     );
   }
 }
+Widget _passwordTextField() {
+  return StreamBuilder(
+    builder: (BuildContext context, AsyncSnapshot snapshot) {
+      return Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: TextField(
+          keyboardType: TextInputType.name,
+          obscureText: true,
+          decoration: InputDecoration(
+              icon: Icon(Icons.lock),
+              hintText: 'contraseña',
+              labelText: 'contraseña'),
+          onChanged: (value) {},
+        ),
+      );
+    },
+  );
+}
+
+
 
