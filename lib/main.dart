@@ -1,5 +1,5 @@
-import 'package:app_gym/Login_pagina.dart';
 import 'package:flutter/material.dart';
+import 'Login_pagina.dart';
 
 void main() {
   var app = MaterialApp(
@@ -31,13 +31,10 @@ void main() {
   runApp(app);
 }
 
-class MyMapp extends StatelessWidget {
+class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
       debugShowCheckedModeBanner: false,
       initialRoute: Loginpagina.id,
       routes: {
