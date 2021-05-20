@@ -1,4 +1,4 @@
-import 'package:app_gym/Login_pagina.dart';
+import 'Login_pagina.dart' show Loginpagina;
 import 'package:flutter/material.dart';
 
 void main() {
