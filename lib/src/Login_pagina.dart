@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Loginpagina extends StatefulWidget {
   static String id = 'Loginpagina';
-
   @override
   _LoginpaginaState createState() => _LoginpaginaState();
 }
