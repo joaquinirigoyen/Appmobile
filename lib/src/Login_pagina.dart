@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Loginpagina extends StatefulWidget {
-  static String id = 'Loginpagina';
-  @override
-  _LoginpaginaState createState() => _LoginpaginaState();
-}
-
-class _LoginpaginaState extends State<Loginpagina> {
+class Login_pagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -77,21 +71,24 @@ Widget _bottonLogin() {
     builder: (BuildContext context, AsyncSnapshot snapshot) {
       // ignore: deprecated_member_use
       return RaisedButton(
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
-            child: Text(
-              'Iniciar Sesion',
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold,
-              ),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
+          child: Text(
+            'Iniciar Sesion',
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-          elevation: 15.0,
-          color: Colors.orange[600],
-          onPressed: () {});
+        ),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        elevation: 15.0,
+        color: Colors.orange[600],
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      );
     },
   );
 }
