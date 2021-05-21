@@ -10,7 +10,7 @@ class Botonflotante extends StatelessWidget {
         onPressed: () {
           // print("no tiene uso todavia");
           Navigator.push(context,
-              MaterialPageRoute(builder: (BuildContext context) => pagina2()));
+              MaterialPageRoute(builder: (BuildContext context) => Pagina2()));
         });
   }
 }
