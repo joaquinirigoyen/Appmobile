@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         drawer: MenuLateral(),
+        backgroundColor: Colors.grey,
         body: Container(
           child: Center(
             child: Text(
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
               style: TextStyle(fontSize: 40),
             ),
           ),
-          color: Colors.grey,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Botonflotante(),
