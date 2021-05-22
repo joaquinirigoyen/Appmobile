@@ -112,23 +112,35 @@ class MenuLateral extends StatelessWidget {
                     fit: BoxFit.cover)),
           ),
           Ink(
-            color: Colors.indigo,
+            color: Colors.orange,
             child: new ListTile(
               title: Text(
-                "MENU 1",
+                "Usuario",
                 style: TextStyle(color: Colors.white),
               ),
+              onTap: () {},
             ),
           ),
           new ListTile(
-            title: Text("MENU 2"),
+            title: Text(
+              "Gimnasio",
+              style: TextStyle(color: Colors.black),
+            ),
             onTap: () {},
           ),
           new ListTile(
-            title: Text("MENU 3"),
+            title: Text(
+              "Contacto",
+              style: TextStyle(color: Colors.black),
+            ),
+            onTap: () {},
           ),
           new ListTile(
-            title: Text("MENU 4"),
+            title: Text(
+              "Turnos",
+              style: TextStyle(color: Colors.black),
+            ),
+            onTap: () {},
           )
         ],
       ),
