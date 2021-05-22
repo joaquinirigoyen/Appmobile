@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Login_pagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 15.0,
-              ),
-              _userTexField(),
-              SizedBox(
-                height: 15.0,
-              ),
-              _passwordTextField(),
-              SizedBox(
-                height: 20.0,
-              ),
-              _bottonLogin(),
-            ],
-          ),
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 15.0,
+            ),
+            _userTexField(),
+            SizedBox(
+              height: 15.0,
+            ),
+            _passwordTextField(),
+            SizedBox(
+              height: 20.0,
+            ),
+            _bottonLogin(),
+          ],
         ),
       ),
     );
@@ -86,9 +85,13 @@ Widget _bottonLogin() {
         elevation: 15.0,
         color: Colors.orange[600],
         onPressed: () {
-          Navigator.of(context).pop();
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => paginaPrinc(),
+          ));
         },
       );
     },
   );
 }
+
+paginaPrinc() {}

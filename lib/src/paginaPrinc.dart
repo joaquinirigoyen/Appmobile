@@ -1,7 +1,7 @@
-import 'package:app_gym/main.dart';
 import 'package:flutter/material.dart';
+import 'package:gimnasio_epet_20/src/botonPP.dart';
 
-class  extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +26,6 @@ class  extends StatelessWidget {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Botonflotante(),
-        bottomNavigationBar: NavegacionBoton(),
       ),
     );
   }
