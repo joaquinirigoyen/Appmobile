@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// hay que asignarle para que haga llamadas, y al boton de covid hay que asignarle un formulario con las prevenciones
+
 class NavegacionBoton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,8 @@ class NavegacionBoton extends StatelessWidget {
   }
 }
 
+//hay que asignarle otra ruta
+
 class Botonflotante extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -64,6 +68,8 @@ class Botonflotante extends StatelessWidget {
         });
   }
 }
+
+//pagina 2 en arreglo, tenemos que ver que ponemos
 
 class Pagina2 extends StatelessWidget {
   @override
@@ -96,6 +102,8 @@ class Pagina2 extends StatelessWidget {
   }
 }
 
+//hay que darle rutas a los iconos
+
 class MenuLateral extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -103,8 +111,8 @@ class MenuLateral extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           new UserAccountsDrawerHeader(
-            accountName: Text("APPTIVAWEB"),
-            accountEmail: Text("informes@gmail.com"),
+            accountName: Text("gimnasio_epet_20"),
+            accountEmail: Text("benjamin.quiroga.epet20@gmail.com"),
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
@@ -118,7 +126,11 @@ class MenuLateral extends StatelessWidget {
                 "Usuario",
                 style: TextStyle(color: Colors.white),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Pagina2()));
+              },
             ),
           ),
           new ListTile(
