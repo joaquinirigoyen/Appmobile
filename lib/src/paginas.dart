@@ -15,14 +15,14 @@ class MyApp extends StatelessWidget {
           ),
         ),
         drawer: MenuLateral(),
-        backgroundColor: Colors.grey,
         body: Container(
           child: Center(
             child: Text(
-              "Pagina principal",
+              "Pagina principalg",
               style: TextStyle(fontSize: 40),
             ),
           ),
+          color: Colors.grey,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Botonflotante(),
@@ -31,8 +31,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// hay que asignarle para que haga llamadas, y al boton de covid hay que asignarle un formulario con las prevenciones
 
 class NavegacionBoton extends StatelessWidget {
   @override
@@ -53,13 +51,11 @@ class NavegacionBoton extends StatelessWidget {
   }
 }
 
-//hay que asignarle otra ruta
-
 class Botonflotante extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-        child: Icon(Icons.search),
+        child: Icon(Icons.cloud),
         backgroundColor: Colors.orange,
         onPressed: () {
           // print("no tiene uso todavia");
@@ -68,8 +64,6 @@ class Botonflotante extends StatelessWidget {
         });
   }
 }
-
-//pagina 2 en arreglo, tenemos que ver que ponemos
 
 class Pagina2 extends StatelessWidget {
   @override
@@ -80,7 +74,7 @@ class Pagina2 extends StatelessWidget {
           child: Text("Gimnasio EPET 20"),
         ),
       ),
-      backgroundColor: Colors.orangeAccent,
+      backgroundColor: Colors.grey,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -102,8 +96,6 @@ class Pagina2 extends StatelessWidget {
   }
 }
 
-//hay que darle rutas a los iconos
-
 class MenuLateral extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -111,8 +103,8 @@ class MenuLateral extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           new UserAccountsDrawerHeader(
-            accountName: Text("gimnasio_epet_20"),
-            accountEmail: Text("benjamin.quiroga.epet20@gmail.com"),
+            accountName: Text("APPTIVAWEB"),
+            accountEmail: Text("informes@gmail.com"),
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
@@ -124,7 +116,7 @@ class MenuLateral extends StatelessWidget {
             child: new ListTile(
               title: Text(
                 "Usuario",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
               onTap: () {
                 Navigator.of(context).pop();

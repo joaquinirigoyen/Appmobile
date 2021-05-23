@@ -1,8 +1,8 @@
+import 'package:app_gym/src/paginas.dart';
 import 'package:flutter/material.dart';
-import 'package:gimnasio_epet_20/src/paginas.dart';
 
 // ignore: camel_case_types
-class Login_pagina extends StatelessWidget {
+class Login_pag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -10,6 +10,12 @@ class Login_pagina extends StatelessWidget {
         primaryColor: Colors.orange,
       ),
       home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text("Gimnasio EPET20"),
+          ),
+        ),
+        backgroundColor: Colors.grey,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
