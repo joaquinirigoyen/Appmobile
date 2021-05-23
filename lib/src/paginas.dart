@@ -80,7 +80,7 @@ class Pagina2 extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Text(
-              "Usuario",
+              "Nombre",
               style: TextStyle(fontSize: 20),
             ),
             color: Colors.black,
