@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:gimnasio_epet_20/src/paginas.dart';
 
 // ignore: camel_case_types
 class Login_pagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 15.0,
-            ),
-            _userTexField(),
-            SizedBox(
-              height: 15.0,
-            ),
-            _passwordTextField(),
-            SizedBox(
-              height: 20.0,
-            ),
-            _bottonLogin(),
-          ],
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.orange,
+      ),
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 15.0,
+              ),
+              _userTexField(),
+              SizedBox(
+                height: 15.0,
+              ),
+              _passwordTextField(),
+              SizedBox(
+                height: 20.0,
+              ),
+              _bottonLogin(),
+              _bottonRegister(),
+            ],
+          ),
         ),
       ),
     );
@@ -85,13 +92,35 @@ Widget _bottonLogin() {
         elevation: 15.0,
         color: Colors.orange[600],
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => paginaPrinc(),
-          ));
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => MyApp()));
         },
       );
     },
   );
 }
 
-paginaPrinc() {}
+Widget _bottonRegister() {
+  return StreamBuilder(
+    builder: (BuildContext context, AsyncSnapshot snapshot) {
+      // ignore: deprecated_member_use
+      return RaisedButton(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
+          child: Text(
+            'Registrarse',
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        elevation: 15.0,
+        color: Colors.green[600],
+        onPressed: () {},
+      );
+    },
+  );
+}

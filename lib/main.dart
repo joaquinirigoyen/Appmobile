@@ -1,4 +1,4 @@
-import 'package:gimnasio_epet_20/src/paginas.dart';
+import 'package:gimnasio_epet_20/src/Login_pagina.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Login_pagina());
