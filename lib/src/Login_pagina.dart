@@ -114,7 +114,7 @@ Widget _bottonRegister() {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
           child: Text(
-            'Registrarse',
+            'REGISTRARSE',
             style: TextStyle(
               fontSize: 16.0,
               fontWeight: FontWeight.bold,
