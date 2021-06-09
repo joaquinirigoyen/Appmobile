@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           child: Center(
             child: Text(
-              "Pagina principalg",
+              "Pagina principal",
               style: TextStyle(fontSize: 40),
             ),
           ),
@@ -41,10 +41,12 @@ class NavegacionBoton extends StatelessWidget {
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.phonelink_ring_outlined),
+            // ignore: deprecated_member_use
             title: Text("Turnos telefonicos")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.attribution_rounded),
+            // ignore: deprecated_member_use
             title: Text("Covid")),
       ],
     );
