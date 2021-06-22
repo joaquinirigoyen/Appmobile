@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           child: Center(
             child: Text(
-              "Pagina EL princii ",
+              "Pagina principal",
               style: TextStyle(fontSize: 40),
             ),
           ),
@@ -41,10 +41,12 @@ class NavegacionBoton extends StatelessWidget {
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.phonelink_ring_outlined),
+            // ignore: deprecated_member_use
             title: Text("Turnos telefonicos")),
         BottomNavigationBarItem(
             // ignore: deprecated_member_use
             icon: Icon(Icons.attribution_rounded),
+            // ignore: deprecated_member_use
             title: Text("Covid")),
       ],
     );
@@ -74,13 +76,13 @@ class Pagina2 extends StatelessWidget {
           child: Text("Gimnasio EPET 20"),
         ),
       ),
-      backgroundColor: Colors.orangeAccent,
+      backgroundColor: Colors.grey,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
             child: Text(
-              "Usuario",
+              "Nombre",
               style: TextStyle(fontSize: 20),
             ),
             color: Colors.black,
@@ -118,7 +120,11 @@ class MenuLateral extends StatelessWidget {
                 "Usuario",
                 style: TextStyle(color: Colors.black),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Pagina2()));
+              },
             ),
           ),
           new ListTile(
