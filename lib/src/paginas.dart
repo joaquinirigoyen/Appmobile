@@ -5,7 +5,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.orange,
+        primaryColor: Colors.blue,
         accentColor: Colors.grey,
       ),
       home: Scaffold(
@@ -58,7 +58,7 @@ class Botonflotante extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
         child: Icon(Icons.cloud),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white,
         onPressed: () {
           // print("no tiene uso todavia");
           Navigator.push(context,
@@ -114,7 +114,7 @@ class MenuLateral extends StatelessWidget {
                     fit: BoxFit.cover)),
           ),
           Ink(
-            color: Colors.orange,
+            color: Colors.blue,
             child: new ListTile(
               title: Text(
                 "Usuario",
