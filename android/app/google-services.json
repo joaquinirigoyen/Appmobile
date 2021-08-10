@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501603625983",
+    "project_id": "bd-gimnasio-app",
+    "storage_bucket": "bd-gimnasio-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501603625983:android:a773eb4477787f0c3095ca",
+        "android_client_info": {
+          "package_name": "ar.com.init.app_gym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501603625983-632kga4u5loqi2s6rta5fji11h1qdf03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvrrL0qe8TtVIDqNJ9miZ48X6bvfaGINU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501603625983-632kga4u5loqi2s6rta5fji11h1qdf03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
