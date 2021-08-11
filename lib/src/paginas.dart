@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import "calendar.dart";
-=======
-import 'Login_pagina.dart';
->>>>>>> cf262f05815f99699d5790943047dcc2db6e5d19
+import 'package:app_gym/src/Login_pagina.dart';
 
 class MyApp extends StatelessWidget {
   @override
