@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Login_pagina.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -114,11 +115,10 @@ class MenuLateral extends StatelessWidget {
                     fit: BoxFit.cover)),
           ),
           Ink(
-            color: Colors.blue,
             child: new ListTile(
               title: Text(
                 "Usuario",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.black, fontSize: 18),
               ),
               onTap: () {
                 Navigator.of(context).pop();
@@ -128,18 +128,24 @@ class MenuLateral extends StatelessWidget {
             ),
           ),
           new ListTile(
+            leading: Icon(Icons.add_circle_outline),
             title: Text(
-              "Gimnasio",
-              style: TextStyle(color: Colors.black),
+              "Acerca del Gimnasio",
+              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
             onTap: () {},
           ),
           new ListTile(
+            leading: Icon(Icons.arrow_back),
             title: Text(
-              "Contacto",
-              style: TextStyle(color: Colors.black),
+              "Cerrar sesion",
+              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Login_pag()));
+            },
           ),
           new ListTile(
             title: Text(
