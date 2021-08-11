@@ -116,10 +116,12 @@ class MenuLateral extends StatelessWidget {
           ),
           Ink(
             child: new ListTile(
+              leading: Icon(Icons.accessibility_new_rounded),
               title: Text(
                 "Usuario",
                 style: TextStyle(color: Colors.black, fontSize: 18),
               ),
+              tileColor: Colors.blue,
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -141,6 +143,7 @@ class MenuLateral extends StatelessWidget {
               "Cerrar sesion",
               style: TextStyle(color: Colors.black, fontSize: 18),
             ),
+            tileColor: Colors.blue,
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
@@ -148,9 +151,10 @@ class MenuLateral extends StatelessWidget {
             },
           ),
           new ListTile(
+            leading: Icon(Icons.calendar_today_rounded),
             title: Text(
               "Turnos",
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
             onTap: () {},
           )
