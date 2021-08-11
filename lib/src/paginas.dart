@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "calendar.dart";
 
 class MyApp extends StatelessWidget {
   @override
@@ -146,7 +147,11 @@ class MenuLateral extends StatelessWidget {
               "Turnos",
               style: TextStyle(color: Colors.black),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => calendar()));
+            },
           )
         ],
       ),
