@@ -59,6 +59,14 @@ class _CalendarState extends State<calendar> {
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(5.0),
           ),
+          defaultDecoration: BoxDecoration(
+            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(5.0),
+          ),
+          weekendDecoration: BoxDecoration(
+            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(5.0),
+          ),
         ),
         headerStyle: HeaderStyle(
           formatButtonVisible: true,
