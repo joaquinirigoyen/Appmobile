@@ -1,3 +1,4 @@
+import 'package:app_gym/src/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -9,10 +10,20 @@ class calendar extends StatefulWidget {
 
 // ignore: camel_case_types
 class _CalendarState extends State<calendar> {
+  Map<DateTime, List<Event>> selectedEvents;
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
   @override
+  void initState() {
+    selectedEvents = {};
+    super.initState();
+  }
+
+  List<Event> _getEventsfromDay(DateTime date) {
+    return selectedEvents[date] ?? [];
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -44,6 +55,8 @@ class _CalendarState extends State<calendar> {
         selectedDayPredicate: (DateTime date) {
           return isSameDay(selectedDay, date);
         },
+
+        eventLoader: _getEventsfromDay,
 
         //el estilo del calendario
         calendarStyle: CalendarStyle(
@@ -83,6 +96,12 @@ class _CalendarState extends State<calendar> {
           rightChevronVisible: false,
           headerPadding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () =>
+            showDialog(context: context, builder: (context) => AlertDialog()),
+        label: Text("añadir evento"),
+        icon: Icon(Icons.add),
       ),
     );
   }
