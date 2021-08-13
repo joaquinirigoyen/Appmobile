@@ -2,6 +2,7 @@ import 'event.dart';
 import 'package:app_gym/src/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+
 // ignore: camel_case_types
 class calendar extends StatefulWidget {
   @override
@@ -103,9 +104,11 @@ class _CalendarState extends State<calendar> {
                 color: Colors.white,
               ),
             ),
-          )
-          ..._getEventsfromDay(selectedDay).map((Event event) => ListTile(title: Text(event.title),
           ),
+          ..._getEventsfromDay(selectedDay).map(
+            (Event event) => ListTile(
+              title: Text(event.title),
+            ),
           ),
         ],
       ),
@@ -126,7 +129,6 @@ class _CalendarState extends State<calendar> {
                 child: Text("agregar"),
                 onPressed: () {
                   if (_eventController.text.isEmpty) {
-                    
                   } else {
                     if (selectedEvents[selectedDay] != null) {
                       selectedEvents[selectedDay].add(
@@ -136,12 +138,12 @@ class _CalendarState extends State<calendar> {
                       selectedEvents[selectedDay] = [
                         Event(title: _eventController.text)
                       ];
-                    }  
+                    }
                   }
                   Navigator.pop(context);
-                    _eventController.clear();
-                    setState((){});
-                    return;
+                  _eventController.clear();
+                  setState(() {});
+                  return;
                 },
               ),
             ],
