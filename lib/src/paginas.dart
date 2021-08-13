@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import "calendar.dart";
 import 'package:app_gym/src/Login_pagina.dart';
+import 'gimnasio.dart';
+import 'imagen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -110,11 +112,7 @@ class MenuLateral extends StatelessWidget {
             accountName: Text("Nuestro mail"),
             accountEmail: Text("joaquin.quiroga.epet20@gmail.com"),
             decoration: BoxDecoration(
-                color: Colors.blue,
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://www.google.com/search?q=messi&sxsrf=ALeKk00zEW8pYJVqrYO5sF3tsiLh5Smhmg:1628702587977&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiPoc35vanyAhVXILkGHTKQAbcQ_AUoAXoECAEQAw&biw=1366&bih=657#imgrc=a_Eq7KH3QAKh6M'),
-                    fit: BoxFit.cover)),
+                color: Colors.blue, image: DecorationImage(fit: BoxFit.cover)),
           ),
           Ink(
             child: new ListTile(
@@ -136,7 +134,11 @@ class MenuLateral extends StatelessWidget {
               "Acerca del Gimnasio",
               style: TextStyle(color: Colors.black, fontSize: 18),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => gimnasio()));
+            },
           ),
           new ListTile(
             leading: Icon(Icons.arrow_back),

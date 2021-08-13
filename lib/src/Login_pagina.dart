@@ -1,6 +1,6 @@
 import 'package:app_gym/src/paginas.dart';
 import 'package:flutter/material.dart';
-import 'register.dart';
+import 'gimnasio.dart';
 
 // ignore: camel_case_types
 class Login_pag extends StatelessWidget {
@@ -133,10 +133,7 @@ Widget _bottonRegister() {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         elevation: 15.0,
         color: Colors.blue[600],
-        onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => register()));
-        },
+        onPressed: () {},
       );
     },
   );
