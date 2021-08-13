@@ -111,8 +111,7 @@ class MenuLateral extends StatelessWidget {
           new UserAccountsDrawerHeader(
             accountName: Text("Nuestro mail"),
             accountEmail: Text("joaquin.quiroga.epet20@gmail.com"),
-            decoration: BoxDecoration(
-                color: Colors.blue, image: DecorationImage(fit: BoxFit.cover)),
+            decoration: BoxDecoration(color: Colors.blue),
           ),
           Ink(
             child: new ListTile(
