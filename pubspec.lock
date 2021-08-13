@@ -81,6 +81,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -128,6 +129,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+=======
+>>>>>>> 22b117845a28de29ff8ce7378947ac4d685615ea
   intl:
     dependency: transitive
     description:
@@ -135,6 +138,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.17.0"
+<<<<<<< HEAD
   js:
     dependency: transitive
     description:
@@ -142,6 +146,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+=======
+>>>>>>> 22b117845a28de29ff8ce7378947ac4d685615ea
   matcher:
     dependency: transitive
     description:
@@ -191,6 +197,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.1.0"
+<<<<<<< HEAD
   quiver:
     dependency: transitive
     description:
@@ -198,6 +205,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
+=======
+>>>>>>> 22b117845a28de29ff8ce7378947ac4d685615ea
   simple_gesture_detector:
     dependency: transitive
     description:
