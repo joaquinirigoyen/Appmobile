@@ -1,4 +1,5 @@
 import 'event.dart';
+import 'timepickerWidget.dart';
 import 'package:app_gym/src/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -41,7 +42,7 @@ class _CalendarState extends State<calendar> {
         ),
       ),
       body: Column(
-        children: [
+        children: <Widget>[
           TableCalendar(
             firstDay: DateTime.utc(2010, 10, 16),
             lastDay: DateTime.utc(2030, 3, 14),
@@ -110,6 +111,18 @@ class _CalendarState extends State<calendar> {
               title: Text(event.title),
             ),
           ),
+          // ignore: deprecated_member_use
+          RaisedButton(
+              disabledColor: Colors.amber,
+              child: Text("Raised Button"),
+              splashColor: Colors.amber,
+              color: Colors.blueAccent,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => MyHomePage()));
+              }),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
