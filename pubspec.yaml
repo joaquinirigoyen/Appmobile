@@ -30,11 +30,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   table_calendar: ^3.0.2
+<<<<<<< HEAD
   flutter_time_picker_spinner: ^2.0.0
+=======
+<<<<<<< HEAD
+  flutter_time_picker_spinner: ^2.0.0
+=======
+>>>>>>> 52ba91523255d616c219f73eeb559d3722a2f038
   google_sign_in: ^5.0.7
   http: ^0.13.3
   font_awesome_flutter: ^9.1.0
 
+>>>>>>> f88574cfc04f554525d5c79f3092ddc928a63a57
 
 dev_dependencies:
   flutter_test:
