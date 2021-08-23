@@ -81,6 +81,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
+  flutter_time_picker_spinner:
+    dependency: "direct main"
+    description:
+      name: flutter_time_picker_spinner
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
+=======
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -128,6 +137,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
+>>>>>>> f88574cfc04f554525d5c79f3092ddc928a63a57
   intl:
     dependency: transitive
     description:
