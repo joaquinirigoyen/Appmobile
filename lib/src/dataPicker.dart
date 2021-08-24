@@ -12,7 +12,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
 
   String getText() {
     if (date == null) {
-      return 'Select Date';
+      return 'Elija una fecha';
     } else {
       return DateFormat('MM/dd/yyyy').format(date);
       // return '${date.month}/${date.day}/${date.year}';

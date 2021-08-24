@@ -1,10 +1,7 @@
-import 'button.dart';
 import 'dataPicker.dart';
-import 'range.dart';
 import 'dateTime.dart';
 import 'timePicker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'paginas.dart';
 
 // ignore: camel_case_types
@@ -15,7 +12,7 @@ class calendar extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         title: title,
         theme: ThemeData(
-          primaryColor: Colors.black,
+          primaryColor: Colors.blue,
         ),
         home: MainPage(),
       );
@@ -53,7 +50,7 @@ class _MainPageState extends State<MainPage> {
                 const SizedBox(height: 24),
                 TimePickerWidget(),
                 const SizedBox(height: 24),
-                DateRangePickerWidget(),
+                DatetimePickerWidget(),
               ],
             ),
           ),
