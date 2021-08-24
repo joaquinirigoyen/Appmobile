@@ -33,6 +33,10 @@ dependencies:
 <<<<<<< HEAD
   flutter_time_picker_spinner: ^2.0.0
 =======
+<<<<<<< HEAD
+  flutter_time_picker_spinner: ^2.0.0
+=======
+>>>>>>> 52ba91523255d616c219f73eeb559d3722a2f038
   google_sign_in: ^5.0.7
   http: ^0.13.3
   font_awesome_flutter: ^9.1.0

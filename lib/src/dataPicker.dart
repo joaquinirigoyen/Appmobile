@@ -21,7 +21,7 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
-        title: 'Eliga una fecha',
+        title: 'Elija una fecha',
         text: getText(),
         onClicked: () => pickDate(context),
       );
