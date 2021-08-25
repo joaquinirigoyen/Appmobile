@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import "calendar.dart";
+import 'calendar.dart';
 import 'package:app_gym/src/Login_pagina.dart';
 import 'gimnasio.dart';
 
@@ -135,7 +135,7 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => gimnasio()));
+                  builder: (BuildContext context) => Gimnasio()));
             },
           ),
           new ListTile(

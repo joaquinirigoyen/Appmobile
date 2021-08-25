@@ -2,12 +2,12 @@ import 'button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class DatetimePickerWidget extends StatefulWidget {
+class DateRangePickerWidget extends StatefulWidget {
   @override
-  _DatetimePickerWidgetState createState() => _DatetimePickerWidgetState();
+  _DateRangePickerWidget createState() => _DateRangePickerWidget();
 }
 
-class _DatetimePickerWidgetState extends State<DatetimePickerWidget> {
+class _DateRangePickerWidget extends State<DateRangePickerWidget> {
   DateTime dateTime;
 
   String getText() {
