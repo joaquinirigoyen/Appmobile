@@ -12,7 +12,7 @@ class _DatetimePickerWidgetState extends State<DatetimePickerWidget> {
 
   String getText() {
     if (dateTime == null) {
-      return 'Eliga una fecha';
+      return 'Seleccione fecha con hora';
     } else {
       return DateFormat('MM/dd/yyyy HH:mm').format(dateTime);
     }
@@ -20,7 +20,7 @@ class _DatetimePickerWidgetState extends State<DatetimePickerWidget> {
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
-        title: 'Eliga una fecha',
+        title: 'fecha y hora',
         text: getText(),
         onClicked: () => pickDateTime(context),
       );

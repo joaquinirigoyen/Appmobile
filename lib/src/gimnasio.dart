@@ -18,54 +18,66 @@ class Gimnasio extends StatelessWidget {
         childAspectRatio: 4 / 3,
         children: <Widget>[
           Muestra(
-            child: IconButton(
-              icon: Icon(Icons.festival),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies()));
-              },
-              tooltip: 'Suministros',
+            child: Ink(
+              decoration: const ShapeDecoration(
+                color: Colors.lightBlue,
+                shape: CircleBorder(),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.festival),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                },
+                tooltip: 'Suministros',
+              ),
             ),
             text: 'suministros del gimnasio',
           ),
           Muestra(
-            child: IconButton(
-              icon: Icon(Icons.assignment_sharp),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies()));
-              },
-              tooltip: 'Especificaciones',
+            child: Ink(
+              decoration: const ShapeDecoration(
+                color: Colors.lightBlue,
+                shape: CircleBorder(),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.assignment_sharp),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                },
+                tooltip: 'Especificaciones',
+              ),
             ),
-            text: 'Especificaciones del gimnasio',
+            text: 'Especificaciones',
           ),
           Muestra(
-            child: IconButton(
-              icon: Icon(Icons.assignment_late_rounded),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies()));
-              },
-              tooltip: 'Reglas',
+            child: Ink(
+              decoration: const ShapeDecoration(
+                color: Colors.lightBlue,
+                shape: CircleBorder(),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.assignment_late_rounded),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                },
+                tooltip: 'Reglas',
+              ),
             ),
             text: 'Reglas del gimnasio',
           ),
           Muestra(
-            child: IconButton(
-              icon: Icon(Icons.sports_basketball_rounded),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies()));
-              },
-              tooltip: 'Equipo',
+            child: Ink(
+              decoration: const ShapeDecoration(
+                color: Colors.lightBlue,
+                shape: CircleBorder(),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.sports_basketball_rounded),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                },
+                tooltip: 'Equipo',
+              ),
             ),
             text: 'Equipo del gimnasio',
           ),
@@ -88,6 +100,8 @@ class Muestra extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shadowColor: Colors.black,
+      elevation: 5,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Center(
@@ -95,11 +109,14 @@ class Muestra extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               this.child,
-              SizedBox(height: 30),
+              SizedBox(
+                height: 20,
+                width: 200,
+              ),
               Text(
                 this.text,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 13),
               ),
             ],
           ),
