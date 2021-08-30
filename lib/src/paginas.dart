@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "calendar.dart";
 import 'package:app_gym/src/Login_pagina.dart';
+import 'user.dart';
 import 'gimnasio.dart';
 
 class MyApp extends StatelessWidget {
@@ -122,7 +123,7 @@ class MenuLateral extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => Pagina2()));
+                    builder: (BuildContext context) => User()));
               },
             ),
           ),
