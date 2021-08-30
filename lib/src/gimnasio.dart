@@ -26,7 +26,10 @@ class Gimnasio extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.festival),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Suplies()));
                 },
                 tooltip: 'Suministros',
               ),
@@ -42,7 +45,10 @@ class Gimnasio extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.assignment_sharp),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Suplies()));
                 },
                 tooltip: 'Especificaciones',
               ),
@@ -58,7 +64,10 @@ class Gimnasio extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.assignment_late_rounded),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Suplies()));
                 },
                 tooltip: 'Reglas',
               ),
@@ -74,7 +83,10 @@ class Gimnasio extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.sports_basketball_rounded),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Suplies()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => Suplies()));
                 },
                 tooltip: 'Equipo',
               ),
