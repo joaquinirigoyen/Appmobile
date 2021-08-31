@@ -13,6 +13,7 @@ class LoginController extends GetxController {
   // Example code of how to sign in with email and password.
   void signInWithEmailAndPassword() async {
     try {
+      // ignore: unused_local_variable
       final User user = (await _auth.signInWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,
@@ -38,6 +39,7 @@ class LoginController extends GetxController {
   }
 
   void signOut() async {
+    // ignore: await_only_futures
     final User user = await _auth.currentUser;
     if (user == null) {
       Get.snackbar('Out', 'No one has signed in.',
