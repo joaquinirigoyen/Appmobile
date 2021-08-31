@@ -1,6 +1,15 @@
-import 'package:app_gym/src/Login_pagina.dart';
 import 'package:flutter/material.dart';
+import 'package:app_gym/src/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get.dart';
 
-void main() {
-  runApp(Login_pag());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(GetMaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: '/home',
+    navigatorKey: Get.key,
+    getPages: routes(),
+  ));
 }
