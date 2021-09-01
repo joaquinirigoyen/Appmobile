@@ -25,6 +25,7 @@ class Gimnasio extends StatelessWidget {
               ),
               child: IconButton(
                 icon: Icon(Icons.festival),
+                splashRadius: 100,
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -44,6 +45,7 @@ class Gimnasio extends StatelessWidget {
               ),
               child: IconButton(
                 icon: Icon(Icons.assignment_sharp),
+                splashRadius: 100,
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -63,6 +65,7 @@ class Gimnasio extends StatelessWidget {
               ),
               child: IconButton(
                 icon: Icon(Icons.assignment_late_rounded),
+                splashRadius: 100,
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -82,6 +85,7 @@ class Gimnasio extends StatelessWidget {
               ),
               child: IconButton(
                 icon: Icon(Icons.sports_basketball_rounded),
+                splashRadius: 100,
                 onPressed: () {
                   Navigator.push(
                       context,
