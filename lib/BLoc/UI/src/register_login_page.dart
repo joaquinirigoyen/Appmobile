@@ -1,4 +1,4 @@
-import 'package:app_gym/controllers/registration_login_controller.dart';
+import 'package:app_gym/BLoc/controllers/registration_login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

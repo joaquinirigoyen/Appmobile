@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_gym/src/routes.dart';
+import 'package:app_gym/BLoc/UI/src/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:app_gym/src/homepage.dart';
+import 'package:app_gym/BLoc/UI/src/homepage.dart';
 import 'package:flutter/material.dart';
 import 'calendar.dart';
 import 'user.dart';
