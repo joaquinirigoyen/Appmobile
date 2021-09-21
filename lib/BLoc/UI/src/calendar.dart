@@ -36,6 +36,7 @@ class _MainPageState extends State<MainPage> {
         body: buildPages(),
       );
 
+  // ignore: missing_return
   Widget buildPages() {
     switch (index) {
       case 0:
