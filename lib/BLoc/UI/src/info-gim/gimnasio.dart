@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'suplies.dart';
-import 'paginas.dart';
+import '../paginas.dart';
 
 // ignore: camel_case_types
 class Gimnasio extends StatelessWidget {

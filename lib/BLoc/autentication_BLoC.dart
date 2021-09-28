@@ -1,17 +1,16 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter_firebase_flutter_2/BLoc/authentication_BLoC/bloc.dart';
-import 'package:flutter_firebase_flutter_2/BLoc/UI/src/repository/user_repository.dart';
 import 'package:meta/meta.dart';
 import 'Event/autentication_event.dart';
 import 'State/autentication_state.dart';
+import 'UI/src/repository/user_repository.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   final UserRepository _userRepository;
 
-  AuthenticationBloc({@required UserRepository userRepository})
-      : assert(userRepository != null),
+  AutenticationBloc({@required UserRepository userRepository})
+      : assert(UserRepository != null),
         _userRepository = userRepository;
 
   @override

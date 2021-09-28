@@ -1,6 +1,6 @@
 import 'dateTime.dart';
 import 'package:flutter/material.dart';
-import 'paginas.dart';
+import '../paginas.dart';
 import 'range.dart';
 
 // ignore: camel_case_types

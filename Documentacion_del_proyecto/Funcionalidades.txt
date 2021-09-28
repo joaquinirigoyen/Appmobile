@@ -1,0 +1,17 @@
+		Guia de instrucciones manual de aplicacion del gimnasio 
+
+	SuperUsuario
+1)Usted podra ver en una pantalla los datos cargados de los turnos en una pantalla, estando en tiempo real cuando se le den los turnos 
+
+
+	Usuario:  
+1) usted tendra 5 pantallas la cuales todas estan conectadas se explicara su funcion en orden de uso.
+	Pantalla de login(Primera pantalla a mostrar):
+Usted si quiere iniciar sesion en nuestra aplicacion tendra que tener una cuenta google de dominio @gmail.com, pudiendo con el boton "Acceder con google podra elegir su mail correspondiente y elegir una contraseña alfanumerica(letras y numeros) y se cargara en  nuestra base de datos" desde ahi se podra dirigir a la pantalla principal. Una vez que usted este cargado en la pantalla de login, ya accediendo en la pantalla de login donde dice "Ponga su mail" y "Contraseña" ya establecida, usted ya puede entrar y salir de la aplicacion estando registrando. 
+
+	pantalla principal(Segunda pantalla de mostrar )
+1) Esta pantalla usted podra ver sus datos personales, como el mail, usted tendra dos botones abajo uno llamado "Turnos telefonicos" podra llamar algun administrativo del colegio el cual se encarga de los turnos siempre y cuando este dentro del horario del colegio (8 a 18:30) y tendra otro boton llamado "Covid" el cual mostrara el protocolo de COVID-19. Esta pantalla tendra un boton en la parte superior a la izquierda la cual tendra 4 opciones, usuario,acerca del gimnasio, cerrar sesion y turnos, los cuales seran explicados a continuacion.
+
+
+	pantalla de Usuario
+    

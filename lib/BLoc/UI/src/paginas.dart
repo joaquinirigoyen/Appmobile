@@ -1,8 +1,8 @@
 import 'package:app_gym/BLoc/UI/src/homepage.dart';
 import 'package:flutter/material.dart';
-import 'calendar.dart';
-import 'user.dart';
-import 'gimnasio.dart';
+import 'calendario/calendar.dart';
+import 'info-gim/user.dart';
+import 'info-gim/gimnasio.dart';
 
 class MyApp extends StatelessWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'paginas.dart';
+import '../paginas.dart';
 
 class Suplies extends StatelessWidget {
   @override
