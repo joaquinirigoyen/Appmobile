@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'Event/autentication_event.dart';
-import 'State/autentication_state.dart';
-import 'UI/src/repository/user_repository.dart';
+import 'package:app_gym/BLoc/Event/autentication_event.dart';
+import 'package:app_gym/BLoc/State/autentication_state.dart';
+import 'package:app_gym/BLoc/UI/src/repository/user_repository.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
