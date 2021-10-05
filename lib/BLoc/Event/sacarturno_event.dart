@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-abstract class SacarTurnoEvent extends Equatable {
+class SacarTurnoEvent extends Equatable {
   @override
   List<Object> get props => [];
 }

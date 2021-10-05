@@ -7,12 +7,20 @@ import 'package:app_gym/BLoc/State/sacarturnos_state.dart';
 import 'package:equatable/equatable.dart';
 
 class SacarTurnoBloc extends Bloc<SacarTurnoEvent, SacarTurnoState> {
-  SacarTurnoBloc(GimansioLibreState initialState); super(initialState){
-
+  SacarTurnoBloc(SacarTurnoState initialState) : super(initialState) {
+    add(SacarTurnoEvent());
   }
 
-  @Override
-  Stream<GimansioLibreState> mapEventToState(GimnasiolibreEvent)async*{
-    if (event is GimnasioLibreEvent)
+  @override
+  Stream<SacarTurnoState> mapEventToState(SacarTurnoEvent event) async* {
+    if (event is SacarTurnoEvent) {
+      print('Gimnasio libre');
+      yield this.state.gimLibre(loading: true, gimnasioLibre: []);
+      await Future.delayed(Duration(seconds: 2));
+    } else if (event is GimansioCerradoEvent) {
+      print('El gimnasio esta cerrado. ');
+    } else if (event is GimnasioOcupadoEvent) {
+      print('El gimnasio esta ocupado.');
+    }
   }
 }
