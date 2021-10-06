@@ -1,5 +1,5 @@
-import 'package:app_gym/src/paginas.dart';
-import 'package:app_gym/controllers/login_controller.dart';
+import 'package:app_gym/BLoc/UI/src/paginas.dart';
+import 'package:app_gym/BLoc/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sign_button/sign_button.dart';

@@ -20,7 +20,7 @@ class _DateRangePickerWidget extends State<DateRangePickerWidget> {
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
-        title: 'Eliga una fecha',
+        title: Title(color: Colors.black, child: Text('eliga una fecha')),
         text: getText(),
         onClicked: () => pickDateTime(context),
       );

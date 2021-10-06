@@ -1,8 +1,8 @@
-import 'package:app_gym/src/homepage.dart';
+import 'package:app_gym/BLoc/UI/src/homepage.dart';
 import 'package:flutter/material.dart';
-import 'calendar.dart';
-import 'user.dart';
-import 'gimnasio.dart';
+import 'calendario/calendar.dart';
+import 'info-gim/user.dart';
+import 'info-gim/gimnasio.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -160,7 +160,7 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => calendar()));
+                  builder: (BuildContext context) => Calendar()));
             },
           )
         ],

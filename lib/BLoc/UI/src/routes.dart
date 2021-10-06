@@ -1,7 +1,7 @@
-import 'package:app_gym/src/paginas.dart';
-import 'package:app_gym/src/homepage.dart';
-import 'package:app_gym/src/login_pagina.dart';
-import 'package:app_gym/src/register_login_page.dart';
+import 'package:app_gym/BLoc/UI/src/paginas.dart';
+import 'package:app_gym/BLoc/UI/src/homepage.dart';
+import 'package:app_gym/BLoc/UI/src/login_pagina.dart';
+import 'package:app_gym/BLoc/UI/src/register_login_page.dart';
 import 'package:get/route_manager.dart';
 
 routes() => [

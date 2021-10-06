@@ -1,10 +1,10 @@
 import 'dateTime.dart';
 import 'package:flutter/material.dart';
-import 'paginas.dart';
+import '../paginas.dart';
 import 'range.dart';
 
 // ignore: camel_case_types
-class calendar extends StatelessWidget {
+class Calendar extends StatelessWidget {
   static final String title = 'Date (Range) & Time';
 
   @override
@@ -36,6 +36,7 @@ class _MainPageState extends State<MainPage> {
         body: buildPages(),
       );
 
+  // ignore: missing_return
   Widget buildPages() {
     switch (index) {
       case 0:
