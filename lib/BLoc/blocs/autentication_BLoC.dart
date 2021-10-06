@@ -5,8 +5,7 @@ import 'package:app_gym/BLoc/Event/autentication_event.dart';
 import 'package:app_gym/BLoc/State/autentication_state.dart';
 import 'package:app_gym/BLoc/UI/src/repository/user_repository.dart';
 
-class AuthenticationBloc
-    extends Bloc<AuthenticationEvent, AuthenticationState> {
+class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> {
   final UserRepository _userRepository;
 
   AutenticationBloc({@required UserRepository userRepository})

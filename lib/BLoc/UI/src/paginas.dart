@@ -160,7 +160,7 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => calendar()));
+                  builder: (BuildContext context) => Calendar()));
             },
           )
         ],

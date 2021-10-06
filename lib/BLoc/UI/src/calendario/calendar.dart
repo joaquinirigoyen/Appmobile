@@ -4,7 +4,7 @@ import '../paginas.dart';
 import 'range.dart';
 
 // ignore: camel_case_types
-class calendar extends StatelessWidget {
+class Calendar extends StatelessWidget {
   static final String title = 'Date (Range) & Time';
 
   @override

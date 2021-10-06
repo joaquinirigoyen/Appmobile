@@ -22,7 +22,7 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
-        title: 'Tiempo',
+        title: Title(color: Colors.black, child: Text('Tiempo')),
         text: getText(),
         onClicked: () => pickTime(context),
       );

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ButtonHeaderWidget extends StatelessWidget {
-  final String title;
   final String text;
   final VoidCallback onClicked;
 
   const ButtonHeaderWidget({
     Key key,
-    @required this.title,
     @required this.text,
     @required this.onClicked,
+    Color color,
+    Title title,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => HeaderWidget(
-        title: title,
+    title: '',
         child: ButtonWidget(
           text: text,
           onClicked: onClicked,
@@ -36,7 +36,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size.fromHeight(40),
-          primary: Colors.white,
+          primary: Colors.blue,
         ),
         child: FittedBox(
           child: Text(
@@ -65,7 +65,7 @@ class HeaderWidget extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),

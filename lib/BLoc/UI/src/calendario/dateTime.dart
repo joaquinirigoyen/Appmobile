@@ -20,7 +20,7 @@ class _DatetimePickerWidgetState extends State<DatetimePickerWidget> {
 
   @override
   Widget build(BuildContext context) => ButtonHeaderWidget(
-        title: 'fecha y hora',
+        title: Title(color: Colors.black, child: Text('Fecha y hora')),
         text: getText(),
         onClicked: () => pickDateTime(context),
       );
