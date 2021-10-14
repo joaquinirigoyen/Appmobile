@@ -18,84 +18,60 @@ class Gimnasio extends StatelessWidget {
         childAspectRatio: 4 / 3,
         children: <Widget>[
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.festival),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.festival),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Suministros',
-              ),
-            ),
+                        builder: (BuildContext context) => Suplies(),
+                      ));
+                }),
             text: 'suministros del gimnasio',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.assignment_sharp),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.assignment_sharp),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Especificaciones',
-              ),
-            ),
+                        builder: (BuildContext context) => Suplies(),
+                      ));
+                }),
             text: 'Especificaciones',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.assignment_late_rounded),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.accessibility_new),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Reglas',
-              ),
-            ),
+                        builder: (BuildContext context) => Suplies(),
+                      ));
+                }),
             text: 'Reglas del gimnasio',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.sports_basketball_rounded),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.sports_basketball_rounded),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Equipo',
-              ),
-            ),
-            text: 'Equipo del gimnasio',
+                        builder: (BuildContext context) => Suplies(),
+                      ));
+                }),
+            text: 'Equipo del gimnasio del gimnasio',
           ),
         ],
       ),
