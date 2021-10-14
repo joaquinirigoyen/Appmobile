@@ -13,3 +13,13 @@ void main() async {
     getPages: routes(),
   ));
 }
+
+
+//void getUsers() async {
+  //CollectionReference collectionReference =
+    //  FirebaseFirestore.instance.collection("usuarios");
+  //QuerySnapshot usuarios = await collectionReference.get();
+
+  //if (usuarios.docs.length != 0) {
+    //for (var doc in usuarios.docs) {
+      //print(doc.data()); }}}
