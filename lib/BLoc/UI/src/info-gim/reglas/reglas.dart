@@ -39,7 +39,7 @@ class _ReglasState extends State<Reglas> {
         PdfStandardFont(PdfFontFamily.helvetica, 30));
 
     page.graphics.drawImage(
-        PdfBitmap(await _readImageData('Pdf_Succinctly.jpg')),
+        PdfBitmap(await _readImageData('logo_epet.png')),
         Rect.fromLTWH(0, 100, 440, 550));
 
     List<int> bytes = document.save();
