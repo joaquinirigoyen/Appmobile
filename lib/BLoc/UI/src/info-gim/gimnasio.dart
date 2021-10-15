@@ -1,3 +1,4 @@
+import 'package:app_gym/BLoc/UI/src/info-gim/reglas/reglas.dart';
 import 'package:flutter/material.dart';
 import 'suplies.dart';
 import '../paginas.dart';
@@ -54,7 +55,7 @@ class Gimnasio extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies(),
+                        builder: (BuildContext context) => Reglas(),
                       ));
                 }),
             text: 'Reglas del gimnasio',

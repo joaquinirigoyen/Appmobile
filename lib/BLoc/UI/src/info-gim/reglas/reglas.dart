@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:app_gym/BLoc/UI/src/paginas.dart';
-import 'mobile.dart';
+import 'mobile.dart' if (dart.library.html) 'web.dart';
 import 'dart:typed_data';
 import 'package:flutter/services.dart' show rootBundle;
 
-class Reglas extends StatelessWidget {}
+class Reglas extends StatefulWidget {
+  Reglas({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _ReglasState createState() => _ReglasState();
+}
 
 class _ReglasState extends State<Reglas> {
   @override
