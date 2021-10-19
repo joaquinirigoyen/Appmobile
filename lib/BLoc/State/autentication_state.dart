@@ -1,35 +1,22 @@
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthenticationState extends Equatable {
-  const AuthenticationState();
+  AuthenticationState();
 
   @override
   List<Object> get props => [];
 }
 
-// Tres estados:
-// No inicializado -> splash screen
-// Autenticado -> Home
-// No autenticado -> Login
+class AuthenticationInitial extends AuthenticationState {}
 
-class Uninitialized extends AuthenticationState {
+class AuthenticationSuccess extends AuthenticationState {
+  final FirebaseUser firebaseUser;
+
+  AuthenticationSuccess(this.firebaseUser);
+
   @override
-  String toString() => 'No inicializado';
+  List<Object> get props => [firebaseUser];
 }
 
-class Authenticated extends AuthenticationState {
-  final String displayName;
-
-  const Authenticated(this.displayName);
-
-  @override
-  List<Object> get props => [displayName];
-
-  @override
-  String toString() => 'Autenticado - displayName :$displayName';
-}
-
-class Unauthenticated extends AuthenticationState {
-  @override
-  String toString() => 'No autenticado';
-}
+class AuthenticationFailure extends AuthenticationState {}

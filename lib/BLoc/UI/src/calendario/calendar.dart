@@ -1,6 +1,7 @@
 import 'event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import '../paginas.dart';
 
 class Calendar extends StatefulWidget {
   @override
@@ -35,9 +36,11 @@ class _CalendarState extends State<Calendar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ESTech Calendar"),
-        centerTitle: true,
+        title: Center(
+          child: Text("Gimnasio EPET20"),
+        ),
       ),
+      drawer: MenuLateral(),
       body: Column(
         children: [
           TableCalendar(

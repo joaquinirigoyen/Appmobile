@@ -1,59 +1,47 @@
-import 'dart:async';
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:app_gym/BLoc/Event/autentication_event.dart';
 import 'package:app_gym/BLoc/State/autentication_state.dart';
-import 'package:app_gym/BLoc/UI/src/repository/user_repository.dart';
+import 'package:app_gym/BLoc/Event/autentication_event.dart';
+import 'package:app_gym/repositories/repositories.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> {
+class AuthenticationBloc
+    extends Bloc<AuthenticationEvent, AuthenticationState> {
   final UserRepository _userRepository;
 
-  AutenticationBloc({@required UserRepository userRepository})
-      : assert(UserRepository != null),
-        _userRepository = userRepository;
-
-  @override
-  AuthenticationState get initialState => Uninitialized();
+  AuthenticationBloc({UserRepository userRepository})
+      : _userRepository = userRepository,
+        super(AuthenticationInitial());
 
   @override
   Stream<AuthenticationState> mapEventToState(
-    AuthenticationEvent event,
-  ) async* {
-    if (event is AppStarted) {
-      yield* _mapAppStartedToState();
-    }
-    if (event is LoggedIn) {
-      yield* _mapLoggedInToState();
-    }
-    if (event is LoggedOut) {
-      yield* _mapLoggedOutToState();
+      AuthenticationEvent event) async* {
+    if (event is AuthenticationStarted) {
+      yield* _mapAuthenticationStartedToState();
+    } else if (event is AuthenticationLoggedIn) {
+      yield* _mapAuthenticationLoggedInToState();
+    } else if (event is AuthenticationLoggedOut) {
+      yield* _mapAuthenticationLoggedOutInToState();
     }
   }
 
-  Stream<AuthenticationState> _mapAppStartedToState() async* {
-    try {
-      final isSignedIn = await _userRepository.isSignedIn();
-      if (isSignedIn) {
-        final user = await _userRepository.getUser();
-        yield await Future.delayed(Duration(seconds: 5), () {
-          return Authenticated(user);
-        });
-      } else {
-        yield await Future.delayed(Duration(seconds: 5), () {
-          return Unauthenticated();
-        });
-      }
-    } catch (_) {
-      yield Unauthenticated();
-    }
-  }
-
-  Stream<AuthenticationState> _mapLoggedInToState() async* {
-    yield Authenticated(await _userRepository.getUser());
-  }
-
-  Stream<AuthenticationState> _mapLoggedOutToState() async* {
-    yield Unauthenticated();
+  //AuthenticationLoggedOut
+  Stream<AuthenticationState> _mapAuthenticationLoggedOutInToState() async* {
+    yield AuthenticationFailure();
     _userRepository.signOut();
+  }
+
+  //AuthenticationLoggedIn
+  Stream<AuthenticationState> _mapAuthenticationLoggedInToState() async* {
+    yield AuthenticationSuccess(await _userRepository.getUser());
+  }
+
+  // AuthenticationStarted
+  Stream<AuthenticationState> _mapAuthenticationStartedToState() async* {
+    final isSignedIn = await _userRepository.isSignedIn();
+    if (isSignedIn) {
+      final firebaseUser = await _userRepository.getUser();
+      yield AuthenticationSuccess(firebaseUser);
+    } else {
+      yield AuthenticationFailure();
+    }
   }
 }
