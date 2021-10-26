@@ -1,7 +1,7 @@
-import 'package:app_gym/BLoc/UI/src/info-gim/reglas/reglas.dart';
 import 'package:flutter/material.dart';
 import 'suplies.dart';
 import '../paginas.dart';
+import 'reglas.dart';
 
 // ignore: camel_case_types
 class Gimnasio extends StatelessWidget {
