@@ -1,4 +1,4 @@
-class LoginState {
+/* class LoginState {
   final bool isEmailValid;
   final bool isPasswordValid;
   final bool isSubmitting;
@@ -83,3 +83,4 @@ class LoginState {
     );
   }
 }
+ */

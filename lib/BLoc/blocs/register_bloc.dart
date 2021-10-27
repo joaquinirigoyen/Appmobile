@@ -1,4 +1,4 @@
-import 'package:app_gym/BLoc/Event/register_event.dart';
+/* import 'package:app_gym/BLoc/Event/register_event.dart';
 import 'package:app_gym/BLoc/State/register_state.dart';
 import 'package:app_gym/repositories/repositories.dart';
 import 'package:app_gym/BLoc/UI/src/util/validators.dart';
@@ -44,3 +44,4 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     }
   }
 }
+ */

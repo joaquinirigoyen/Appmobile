@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthenticationState extends Equatable {
@@ -20,3 +20,4 @@ class AuthenticationSuccess extends AuthenticationState {
 }
 
 class AuthenticationFailure extends AuthenticationState {}
+ */

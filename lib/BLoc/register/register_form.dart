@@ -1,4 +1,4 @@
-import 'package:app_gym/BLoc/blocs/autentication_BLoC.dart';
+/* import 'package:app_gym/BLoc/blocs/autentication_BLoC.dart';
 import 'package:app_gym/BLoc/Event/autentication_event.dart';
 import 'package:app_gym/BLoc/Event/register_event.dart';
 import 'package:app_gym/BLoc/State/register_state.dart';
@@ -161,3 +161,4 @@ class _LoginFormState extends State<RegisterForm> {
         email: _emailController.text, password: _passwordController.text));
   }
 }
+ */

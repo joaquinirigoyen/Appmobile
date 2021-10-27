@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 
 abstract class LoginEvent extends Equatable {
   @override
@@ -32,3 +32,4 @@ class LoginWithCredentialsPressed extends LoginEvent {
   @override
   List<Object> get props => [email, password];
 }
+ */

@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 
 abstract class NotificacionEvent extends Equatable {
   @override
@@ -10,3 +10,4 @@ class TurnoAceptado extends NotificacionEvent {}
 class TurnoDenegadoEvent extends NotificacionEvent {}
 
 class ProcesandoTurnoEvent extends NotificacionEvent {}
+ */

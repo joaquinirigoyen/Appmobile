@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 
 class SacarTurnoEvent extends Equatable {
   @override
@@ -10,3 +10,4 @@ class GimnasiolibreEvent extends SacarTurnoEvent {}
 class GimansioCerradoEvent extends SacarTurnoEvent {}
 
 class GimnasioOcupadoEvent extends SacarTurnoEvent {}
+ */

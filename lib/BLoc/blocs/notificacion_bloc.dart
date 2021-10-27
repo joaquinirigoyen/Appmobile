@@ -1,4 +1,4 @@
-import 'dart:async';
+/* import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:app_gym/BLoc/Event/notificacion_event.dart';
 import 'package:app_gym/BLoc/State/notificacion_state.dart';
@@ -21,3 +21,4 @@ class NotificacionTurnoBloc extends Bloc<NotificacionEvent, NotificacionState> {
     }
   }
 }
+ */

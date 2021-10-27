@@ -1,4 +1,5 @@
-import 'package:app_gym/BLoc/State/autentication_state.dart';
+
+/* import 'package:app_gym/BLoc/State/autentication_state.dart';
 import 'package:app_gym/BLoc/Event/autentication_event.dart';
 import 'package:app_gym/repositories/repositories.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,3 +46,4 @@ class AuthenticationBloc
     }
   }
 }
+ */

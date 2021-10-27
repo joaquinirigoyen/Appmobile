@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 
 abstract class AuthenticationEvent extends Equatable {
   @override
@@ -10,3 +10,4 @@ class AuthenticationStarted extends AuthenticationEvent {}
 class AuthenticationLoggedIn extends AuthenticationEvent {}
 
 class AuthenticationLoggedOut extends AuthenticationEvent {}
+ */

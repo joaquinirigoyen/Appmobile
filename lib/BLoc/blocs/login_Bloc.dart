@@ -1,4 +1,4 @@
-import 'package:app_gym/BLoc/Event/login_event.dart';
+/* import 'package:app_gym/BLoc/Event/login_event.dart';
 import 'package:app_gym/BLoc/State/login_state.dart';
 import 'package:app_gym/repositories/repositories.dart';
 import 'package:app_gym/BLoc/UI/src/util/validators.dart';
@@ -41,4 +41,4 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       yield LoginState.failure();
     }
   }
-}
+} */

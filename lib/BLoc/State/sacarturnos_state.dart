@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 class SacarTurnoState extends Equatable {
@@ -19,3 +19,4 @@ class SacarTurnoState extends Equatable {
   @override
   List<Object> get props => [this.loading, this.gimnasioLibre];
 }
+ */

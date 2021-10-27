@@ -1,4 +1,4 @@
-class RegisterState {
+/* class RegisterState {
   final bool isEmailValid;
   final bool isPasswordValid;
   final bool isSubmitting;
@@ -82,4 +82,4 @@ class RegisterState {
       isFailure: isFailure ?? this.isFailure,
     );
   }
-}
+} */

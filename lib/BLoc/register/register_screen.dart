@@ -1,4 +1,4 @@
-import 'package:app_gym/BLoc/blocs/register_bloc.dart';
+/* import 'package:app_gym/BLoc/blocs/register_bloc.dart';
 import 'package:app_gym/repositories/repositories.dart';
 import 'package:app_gym/BLoc/register/register_form.dart';
 import 'package:app_gym/widgets/curved_widget.dart';
@@ -70,3 +70,4 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 }
+ */

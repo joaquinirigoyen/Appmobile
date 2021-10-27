@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+/* import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
 class NotificacionState extends Equatable {
@@ -20,3 +20,4 @@ class NotificacionState extends Equatable {
   @override
   List<Object> get props => [this.loading, this.notificaionTurno];
 }
+ */
