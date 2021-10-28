@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../paginas.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Suplies extends StatelessWidget {
   @override
@@ -11,12 +12,31 @@ class Suplies extends StatelessWidget {
         ),
       ),
       drawer: MenuLateral(),
-      body: Container(
-        child: Center(
-          child: Text(
-            "Suministros del gimnasio",
-            style: TextStyle(fontSize: 40),
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Center(
+                  child:
+                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                    OutlinedButton(
+                        child: Icon(Icons.festival),
+                        onPressed: () {
+                          launch(
+                              "https://drive.google.com/file/d/1BOaHlgzl0AdgSdzr0kEdtTaRFloLLy_4/view?usp=sharing");
+                        }),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text("¡Suministros del gimnasio!"),
+                  ]),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
