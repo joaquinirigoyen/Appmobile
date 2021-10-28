@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'suplies.dart';
 import '../paginas.dart';
 import 'reglas.dart';
+import 'especificaciones.dart';
+import 'equipo.dart';
 
 // ignore: camel_case_types
 class Gimnasio extends StatelessWidget {
@@ -36,12 +38,12 @@ class Gimnasio extends StatelessWidget {
             child: InkWell(
                 borderRadius: BorderRadius.circular(30),
                 splashColor: Colors.blue.withAlpha(30),
-                child: Icon(Icons.assignment_sharp),
+                child: Icon(Icons.account_balance_outlined),
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies(),
+                        builder: (BuildContext context) => Especificaciones(),
                       ));
                 }),
             text: 'Especificaciones',
@@ -50,7 +52,7 @@ class Gimnasio extends StatelessWidget {
             child: InkWell(
                 borderRadius: BorderRadius.circular(30),
                 splashColor: Colors.blue.withAlpha(30),
-                child: Icon(Icons.accessibility_new),
+                child: Icon(Icons.assignment_sharp),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -69,10 +71,10 @@ class Gimnasio extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => Suplies(),
+                        builder: (BuildContext context) => Equipo(),
                       ));
                 }),
-            text: 'Equipo del gimnasio del gimnasio',
+            text: 'Equipo del gimnasio',
           ),
         ],
       ),
