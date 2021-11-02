@@ -147,7 +147,7 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => LoginTenPage()));
+                  builder: (BuildContext context) => LoginPage()));
             },
           ),
           new ListTile(

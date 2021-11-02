@@ -4,10 +4,11 @@ import 'package:app_gym/widgets/header.dart';
 import 'package:app_gym/widgets/logo.dart';
 import 'package:app_gym/widgets/textField.dart';
 
-class LoginTenPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+        home: Scaffold(
         body: ListView(
       padding: EdgeInsets.only(top: 0),
       physics: BouncingScrollPhysics(),
@@ -22,6 +23,7 @@ class LoginTenPage extends StatelessWidget {
         SizedBox(height: 40),
         _BottonSignIn()
       ],
+        ),
     ));
   }
 }
@@ -88,7 +90,7 @@ class _Titulo extends StatelessWidget {
           Text('/', style: TextStyle(fontSize: 25, color: Colors.grey)),
           TextButton(
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SignUpTenPage())),
+                  .push(MaterialPageRoute(builder: (_) => SignUpPage())),
               child: Text('SIGN UP',
                   style: TextStyle(
                       fontSize: 18,

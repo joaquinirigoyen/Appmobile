@@ -4,7 +4,7 @@ import 'package:app_gym/widgets/header.dart';
 import 'package:app_gym/widgets/logo.dart';
 import 'package:app_gym/widgets/textField.dart';
 
-class SignUpTenPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +80,7 @@ class _Titulo extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => LoginTenPage())),
+                .push(MaterialPageRoute(builder: (_) => LoginPage())),
             child: Text('Iniciar sesion',
                 style: TextStyle(
                     fontSize: 18,
@@ -90,7 +90,7 @@ class _Titulo extends StatelessWidget {
           Text('/', style: TextStyle(fontSize: 25, color: Colors.grey)),
           TextButton(
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SignUpTenPage())),
+                  .push(MaterialPageRoute(builder: (_) => SignUpPage())),
               child: Text('SIGN UP',
                   style: TextStyle(
                       fontSize: 25,
