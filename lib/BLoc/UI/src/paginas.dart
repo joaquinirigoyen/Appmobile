@@ -1,4 +1,4 @@
-import 'package:app_gym/BLoc/UI/src/homepage.dart';
+import 'package:app_gym/BLoc/login/Login.dart';
 import 'package:flutter/material.dart';
 import 'calendario/calendar.dart';
 import 'info-gim/user.dart';
@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.blue,
-        accentColor: Colors.grey,
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -148,7 +147,7 @@ class MenuLateral extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => HomePage()));
+                  builder: (BuildContext context) => LoginPage()));
             },
           ),
           new ListTile(

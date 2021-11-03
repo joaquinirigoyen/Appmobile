@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'suplies.dart';
 import '../paginas.dart';
+import 'reglas.dart';
+import 'especificaciones.dart';
+import 'equipo.dart';
 
 // ignore: camel_case_types
 class Gimnasio extends StatelessWidget {
@@ -18,83 +21,59 @@ class Gimnasio extends StatelessWidget {
         childAspectRatio: 4 / 3,
         children: <Widget>[
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.festival),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.festival),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Suministros',
-              ),
-            ),
+                        builder: (BuildContext context) => Suplies(),
+                      ));
+                }),
             text: 'suministros del gimnasio',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.assignment_sharp),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.account_balance_outlined),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Especificaciones',
-              ),
-            ),
+                        builder: (BuildContext context) => Especificaciones(),
+                      ));
+                }),
             text: 'Especificaciones',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.assignment_late_rounded),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.assignment_sharp),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Reglas',
-              ),
-            ),
+                        builder: (BuildContext context) => Reglas(),
+                      ));
+                }),
             text: 'Reglas del gimnasio',
           ),
           Muestra(
-            child: Ink(
-              decoration: const ShapeDecoration(
-                color: Colors.lightBlue,
-                shape: CircleBorder(),
-              ),
-              child: IconButton(
-                icon: Icon(Icons.sports_basketball_rounded),
-                splashRadius: 100,
-                onPressed: () {
+            child: InkWell(
+                borderRadius: BorderRadius.circular(30),
+                splashColor: Colors.blue.withAlpha(30),
+                child: Icon(Icons.sports_basketball_rounded),
+                onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Suplies()));
-                },
-                tooltip: 'Equipo',
-              ),
-            ),
+                        builder: (BuildContext context) => Equipo(),
+                      ));
+                }),
             text: 'Equipo del gimnasio',
           ),
         ],

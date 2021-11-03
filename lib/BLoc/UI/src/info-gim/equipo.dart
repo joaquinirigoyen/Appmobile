@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../paginas.dart';
+import 'package:app_gym/BLoc/UI/src/paginas.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Suplies extends StatelessWidget {
+class Equipo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,15 +23,15 @@ class Suplies extends StatelessWidget {
                   child:
                       Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
                     OutlinedButton(
-                        child: Icon(Icons.festival),
+                        child: Icon(Icons.sports_basketball_rounded),
                         onPressed: () {
                           launch(
-                              "https://docs.google.com/document/d/12zE08ETn7PshtPyGliFpROUVGQXzLSSG/edit?usp=sharing&ouid=103558025353731323276&rtpof=true&sd=true");
+                              "https://docs.google.com/document/d/155mDxtm-EIvlhO13v_E5iNqdpOiqRd12/edit?usp=sharing&ouid=103558025353731323276&rtpof=true&sd=true");
                         }),
                     SizedBox(
                       height: 10,
                     ),
-                    Text("¡Suministros del gimnasio!"),
+                    Text("¡Equipo del gimnasio!"),
                   ]),
                 ),
               ),
