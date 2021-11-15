@@ -1,8 +1,8 @@
 import 'package:app_gym/login/Login.dart';
 import 'package:flutter/material.dart';
 import 'calendario/calendar.dart';
-import 'info-gim/user.dart';
 import 'info-gim/gimnasio.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,39 +19,9 @@ class MyApp extends StatelessWidget {
         ),
         drawer: MenuLateral(),
         body: Container(
-          child: Center(
-            child: Text(
-              "Pagina principal",
-              style: TextStyle(fontSize: 40),
-            ),
-          ),
-          color: Colors.grey,
+          child: ListView(),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: Botonflotante(),
-        bottomNavigationBar: NavegacionBoton(),
       ),
-    );
-  }
-}
-
-class NavegacionBoton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: [
-        // ignore: deprecated_member_use
-        BottomNavigationBarItem(
-            // ignore: deprecated_member_use
-            icon: Icon(Icons.phonelink_ring_outlined),
-            // ignore: deprecated_member_use
-            title: Text("Turnos telefonicos")),
-        BottomNavigationBarItem(
-            // ignore: deprecated_member_use
-            icon: Icon(Icons.attribution_rounded),
-            // ignore: deprecated_member_use
-            title: Text("Covid")),
-      ],
     );
   }
 }
@@ -60,44 +30,11 @@ class Botonflotante extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-        child: Icon(Icons.cloud),
+        child: Icon(Icons.coronavirus),
         backgroundColor: Colors.white,
         onPressed: () {
-          // print("no tiene uso todavia");
-          Navigator.push(context,
-              MaterialPageRoute(builder: (BuildContext context) => Pagina2()));
+          launch('');
         });
-  }
-}
-
-class Pagina2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text("Gimnasio EPET 20"),
-        ),
-      ),
-      backgroundColor: Colors.grey,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: Text(
-              "Nombre",
-              style: TextStyle(fontSize: 20),
-            ),
-            color: Colors.black,
-          ),
-          Container(
-            child: Text("Gimnasio"),
-          ),
-        ],
-      ),
-      floatingActionButton: Botonflotante(),
-      bottomNavigationBar: NavegacionBoton(),
-    );
   }
 }
 
@@ -110,7 +47,11 @@ class MenuLateral extends StatelessWidget {
           new UserAccountsDrawerHeader(
             accountName: Text("Nuestro mail"),
             accountEmail: Text("joaquin.quiroga.epet20@gmail.com"),
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: NetworkImage(
+                  'https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1010352067221782528%2Fkezuc7K5_400x400.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Fepet20educacion&tbnid=S1zXV8fnvozkYM&vet=12ahUKEwjHxLDl0JH0AhV_N7kGHdZaBTkQMygCegUIARCnAQ..i&docid=vsMYu94ygZL42M&w=400&h=400&q=epet%2020&ved=2ahUKEwjHxLDl0JH0AhV_N7kGHdZaBTkQMygCegUIARCnAQ'),
+            )),
           ),
           new ListTile(
             leading: Icon(Icons.add_circle_outline),

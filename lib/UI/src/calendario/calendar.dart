@@ -9,7 +9,7 @@ class Calendar extends StatefulWidget {
 }
 
 class _CalendarState extends State<Calendar> {
-  Map<DateTime, List<Event>> selectedEvents;
+  late Map<DateTime, List<Event>> selectedEvents;
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
@@ -134,7 +134,7 @@ class _CalendarState extends State<Calendar> {
                   if (_eventController.text.isEmpty) {
                   } else {
                     if (selectedEvents[selectedDay] != null) {
-                      selectedEvents[selectedDay].add(
+                      selectedEvents[selectedDay]!.add(
                         Event(title: _eventController.text),
                       );
                     } else {

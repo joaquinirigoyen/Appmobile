@@ -87,9 +87,9 @@ class Muestra extends StatelessWidget {
   final String text;
 
   const Muestra({
-    Key key,
-    @required this.child,
-    @required this.text,
+    Key? key,
+    required this.child,
+    required this.text,
   }) : super(key: key);
 
   @override

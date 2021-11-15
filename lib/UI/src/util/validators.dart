@@ -1,4 +1,4 @@
-class EPValidator {
+/* class EPValidator {
   static String? validateName({required String name}) {
     if (name.isEmpty) {
       return 'Name can\'t be empty';
@@ -31,3 +31,4 @@ class EPValidator {
   }
 }
 
+ */
