@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_gym/BLoc/UI/src/paginas.dart';
+import '../paginas.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Equipo extends StatelessWidget {

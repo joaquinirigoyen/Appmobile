@@ -1,31 +1,38 @@
+import 'package:app_gym/UI/src/paginas.dart';
+import 'package:app_gym/login/provider-signIn.dart';
+import 'package:app_gym/login/provider-signIn.dart';
 import 'package:flutter/material.dart';
-import 'package:app_gym/BLoc/login/signIn.dart';
+import 'package:app_gym/login/signIn.dart';
 import 'package:app_gym/widgets/header.dart';
 import 'package:app_gym/widgets/logo.dart';
 import 'package:app_gym/widgets/textField.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      body: ListView(
-        padding: EdgeInsets.only(top: 0),
-        physics: BouncingScrollPhysics(),
-        children: [
-          Stack(
-            children: [HeaderLogin(), LogoHeader()],
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: (context) => GoogleSignInProvider(),
+        child: MaterialApp(
+          home: Scaffold(
+            body: ListView(
+              padding: EdgeInsets.only(top: 0),
+              physics: BouncingScrollPhysics(),
+              children: [
+                Stack(
+                  children: [HeaderLogin(), LogoHeader()],
+                ),
+                _Titulo(),
+                SizedBox(height: 40),
+                _EmailAndPassword(),
+                SizedBox(height: 40),
+                _BottonSignIn(),
+                _GoogleSignIn(),
+              ],
+            ),
           ),
-          _Titulo(),
-          SizedBox(height: 40),
-          _EmailAndPassword(),
-          _ForgotPassword(),
-          SizedBox(height: 40),
-          _BottonSignIn()
-        ],
-      ),
-    ));
-  }
+        ),
+      );
 }
 
 class _BottonSignIn extends StatelessWidget {
@@ -38,19 +45,12 @@ class _BottonSignIn extends StatelessWidget {
       child: TextButton(
         child: Text('iniciar sesion',
             style: TextStyle(color: Colors.white, fontSize: 18)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pop();
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (BuildContext context) => MyApp()));
+        },
       ),
-    );
-  }
-}
-
-class _ForgotPassword extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(right: 25, top: 20),
-      alignment: Alignment.centerRight,
-      child: Text('Forgot Password?'),
     );
   }
 }
@@ -98,6 +98,25 @@ class _Titulo extends StatelessWidget {
                       color: Colors.grey)))
         ],
       ),
+    );
+  }
+}
+
+class _GoogleSignIn extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(25),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
+      child: FloatingActionButton.extended(
+          backgroundColor: Colors.deepPurple[300],
+          icon: FaIcon(FontAwesomeIcons.google, color: Colors.black),
+          label: Text('Iniciar sesion con google'),
+          onPressed: () {
+            final provider =
+                Provider.of<GoogleSignInProvider>(context, listen: false);
+            provider.googleLogin();
+          }),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_gym/BLoc/login/Login.dart';
+import 'package:app_gym/login/Login.dart';
 import 'package:app_gym/widgets/header.dart';
 import 'package:app_gym/widgets/logo.dart';
 import 'package:app_gym/widgets/textField.dart';
