@@ -91,7 +91,7 @@ class _Titulo extends StatelessWidget {
           TextButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => SignUpPage())),
-              child: Text('SIGN UP',
+              child: Text('Registrarse',
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,

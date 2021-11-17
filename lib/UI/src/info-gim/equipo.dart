@@ -16,24 +16,36 @@ class Equipo extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child:
-                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                    OutlinedButton(
-                        child: Icon(Icons.sports_basketball_rounded),
-                        onPressed: () {
-                          launch(
-                              "https://docs.google.com/document/d/155mDxtm-EIvlhO13v_E5iNqdpOiqRd12/edit?usp=sharing&ouid=103558025353731323276&rtpof=true&sd=true");
-                        }),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text("¡Equipo del gimnasio!"),
-                  ]),
-                ),
+            Container(
+              width: 170,
+              height: 170,
+              margin: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(37.0, 38.0),
+                  ),
+                ],
+                color: Colors.blueAccent[200],
+              ),
+              padding: EdgeInsets.all(10),
+              child: Center(
+                child:
+                    Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                  OutlinedButton(
+                      child: Icon(Icons.sports_basketball_rounded),
+                      onPressed: () {
+                        launch(
+                            "https://docs.google.com/document/d/155mDxtm-EIvlhO13v_E5iNqdpOiqRd12/edit?usp=sharing&ouid=103558025353731323276&rtpof=true&sd=true");
+                      }),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text("¡Equipo del gimnasio!"),
+                ]),
               ),
             ),
           ],
