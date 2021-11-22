@@ -123,6 +123,18 @@ class MenuLateral extends StatelessWidget {
             },
           ),
           new ListTile(
+            leading: Icon(Icons.add_circle_outline),
+            title: Text(
+              "Acerca del Gimnasio",
+              style: TextStyle(color: Colors.black, fontSize: 18),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) => User()));
+            },
+          ),
+          new ListTile(
             leading: Icon(Icons.arrow_back),
             title: Text(
               "Cerrar sesion",
