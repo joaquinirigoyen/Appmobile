@@ -16,24 +16,36 @@ class Especificaciones extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Center(
-                  child:
-                      Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                    OutlinedButton(
-                        child: Icon(Icons.account_balance_outlined),
-                        onPressed: () {
-                          launch(
-                              "https://drive.google.com/drive/folders/1b7895QSbCh-Cqfa_6XnUorpv6d04UvPM?usp=sharing");
-                        }),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text("¡Especificaciones del gimnasio!"),
-                  ]),
-                ),
+            Container(
+              width: 170,
+              height: 170,
+              margin: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(37.0, 38.0),
+                  ),
+                ],
+                color: Colors.blueAccent[200],
+              ),
+              padding: EdgeInsets.all(10),
+              child: Center(
+                child:
+                    Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                  OutlinedButton(
+                      child: Icon(Icons.account_balance_outlined),
+                      onPressed: () {
+                        launch(
+                            "https://drive.google.com/drive/folders/1b7895QSbCh-Cqfa_6XnUorpv6d04UvPM?usp=sharing");
+                      }),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text("¡Especificaciones del gimnasio!"),
+                ]),
               ),
             ),
           ],
