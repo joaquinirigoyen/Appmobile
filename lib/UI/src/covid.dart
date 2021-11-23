@@ -47,6 +47,8 @@ class Covid extends StatelessWidget {
               ),
               SizedBox(width: 50, height: 50),
               Container(
+                width: 450,
+                height: 450,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/covid.png'),

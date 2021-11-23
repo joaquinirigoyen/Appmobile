@@ -44,6 +44,7 @@ dependencies:
   fluttertoast: ^8.0.8
   flutter_svg: ^0.23.0+1
   provider: ^6.0.1
+  google_fonts: ^2.1.0
 
  
 
@@ -70,6 +71,7 @@ flutter:
     - assets/eventos.png
     - assets/logo_epet.png
     - assets/icono.png
+    - assets/covid.png
 
   
   # To add assets to your application, add an assets section, like this:

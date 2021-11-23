@@ -1,5 +1,6 @@
 import 'package:app_gym/login/Login.dart';
 import 'package:flutter/material.dart';
+
 import 'calendario/calendar.dart';
 import 'info-gim/gimnasio.dart';
 import 'covid.dart';
@@ -16,13 +17,16 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.grey[400],
         appBar: AppBar(
           title: Center(
-            child: Text("Gimnasio EPET20"),
+            child: Text("EPET 20"),
           ),
         ),
         drawer: MenuLateral(),
         body: Center(
           child: Column(
             children: <Widget>[
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 width: double.infinity,
                 alignment: Alignment.center,
@@ -32,13 +36,14 @@ class MyApp extends StatelessWidget {
                     '¡Bienvenidos!',
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      fontStyle: (FontStyle.italic),
                       color: Colors.black,
                       fontSize: 25,
                     ),
                   ),
                 ),
               ),
-              SizedBox(width: 50, height: 50),
+              SizedBox(width: 50, height: 150),
               Container(
                 width: 350,
                 height: 350,
@@ -48,7 +53,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: 250, height: 250),
+              SizedBox(width: 50, height: 120),
               Botonflotante(),
             ],
           ),
@@ -98,6 +103,10 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => Gimnasio()));
             },
           ),
+          SizedBox(
+            height: 15,
+            width: 15,
+          ),
           new ListTile(
             leading: Icon(Icons.calendar_today_rounded),
             title: Text(
@@ -110,42 +119,58 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => Calendar()));
             },
           ),
-          new ListTile(
-            leading: Icon(Icons.add_circle_outline),
-            title: Text(
-              "Acerca del Gimnasio",
-              style: TextStyle(color: Colors.black, fontSize: 18),
-            ),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) => User()));
-            },
+          SizedBox(
+            height: 15,
+            width: 15,
           ),
           new ListTile(
-            leading: Icon(Icons.add_circle_outline),
+            leading: Icon(Icons.accessibility_rounded),
             title: Text(
-              "Acerca del Gimnasio",
-              style: TextStyle(color: Colors.black, fontSize: 18),
-            ),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) => User()));
-            },
-          ),
-          new ListTile(
-            leading: Icon(Icons.arrow_back),
-            title: Text(
-              "Cerrar sesion",
+              "Usuario",
               style: TextStyle(color: Colors.black, fontSize: 18),
             ),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => LoginPage()));
+                  builder: (BuildContext context) => PerfilPage()));
             },
           ),
+          SizedBox(
+            height: 430,
+            width: 430,
+          ),
+          new ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text(
+                "Cerrar sesion",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (_) => AlertDialog(
+                          title: Text("Cerrar sesion"),
+                          content: Text(
+                            "Seguro que desea cerrar sesion?",
+                          ),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop(false);
+                                },
+                                child: Text("No")),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pushAndRemoveUntil(context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) {
+                                    return LoginPage();
+                                  }), (route) => false);
+                                },
+                                child: Text("Si"))
+                          ],
+                        ));
+              }),
         ],
       ),
     );
