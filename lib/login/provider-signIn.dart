@@ -4,7 +4,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 class Controller extends GetxController {
   var _googleSignIn = GoogleSignIn();
-  // ignore: null_check_always_fails
+  
+  
   var googleAccount = Rx<GoogleSignInAccount?>(null);
 
   login() async {
