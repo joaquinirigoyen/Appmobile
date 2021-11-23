@@ -66,7 +66,8 @@ class Botonflotante extends StatelessWidget {
         backgroundColor: Colors.blue,
         onPressed: () {
           Navigator.of(context).pop();
-          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Covid()));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (BuildContext context) => Covid()));
         });
   }
 }
@@ -81,7 +82,8 @@ class MenuLateral extends StatelessWidget {
             accountName: Text("Nuestro mail"),
             accountEmail: Text("joaquin.quiroga.epet20@gmail.com"),
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("assets/logo_epet.png"), fit: BoxFit.cover),
+              image: DecorationImage(
+                  image: AssetImage("assets/logo_epet.png"), fit: BoxFit.cover),
             ),
           ),
           new ListTile(
@@ -92,7 +94,8 @@ class MenuLateral extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Gimnasio()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Gimnasio()));
             },
           ),
           new ListTile(
@@ -103,7 +106,8 @@ class MenuLateral extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Calendar()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => Calendar()));
             },
           ),
           new ListTile(
@@ -114,7 +118,20 @@ class MenuLateral extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => User()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) => User()));
+            },
+          ),
+          new ListTile(
+            leading: Icon(Icons.add_circle_outline),
+            title: Text(
+              "Acerca del Gimnasio",
+              style: TextStyle(color: Colors.black, fontSize: 18),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) => User()));
             },
           ),
           new ListTile(
@@ -125,7 +142,8 @@ class MenuLateral extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => LoginPage()));
             },
           ),
         ],
