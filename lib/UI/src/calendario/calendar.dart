@@ -2,6 +2,8 @@ import 'event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../paginas.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'turnos.dart';
 
 class Calendar extends StatefulWidget {
   @override
@@ -13,6 +15,8 @@ class _CalendarState extends State<Calendar> {
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
+
+  final firebase = FirebaseFirestore.instance;
 
   TextEditingController _eventController = TextEditingController();
 
@@ -112,6 +116,15 @@ class _CalendarState extends State<Calendar> {
                 event.title,
               ),
             ),
+          ),
+          SizedBox(height: 15),
+          ElevatedButton(
+            style: TextButton.styleFrom(backgroundColor: Colors.blue),
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => Turnos()));
+            },
+            child: Text('Ver mis turnos'),
           ),
         ],
       ),
