@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "DTB",
+      title: "Epet20",
       routes: MyRoutes.routes,
       initialRoute: "/login",
     );

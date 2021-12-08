@@ -1,3 +1,4 @@
+import 'package:app_gym/UI/src/info-gim/gimnasio.dart';
 import 'package:flutter/material.dart';
 import '../paginas.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,7 +18,7 @@ class Reglas extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => MyApp()));
+                    builder: (BuildContext context) => Gimnasio()));
               },
             );
           },

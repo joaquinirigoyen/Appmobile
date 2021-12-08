@@ -77,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
           prefixIcon: Icon(
-            Icons.vpn_key_outlined,
+            Icons.lock_outline_rounded,
             color: Colors.black,
           ),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),

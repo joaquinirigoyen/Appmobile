@@ -72,6 +72,7 @@ flutter:
     - assets/logo_epet.png
     - assets/icono.png
     - assets/covid.png
+    - assets/gimnasio.jpg
 
   
   # To add assets to your application, add an assets section, like this:

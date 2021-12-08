@@ -1,3 +1,4 @@
+import 'package:app_gym/main.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_gym/UX/userModel.dart';
@@ -36,12 +37,20 @@ class _PerfilPageState extends State<PerfilPage> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
+          title: Center(
+            child: Text("Gimnasio EPET20"),
+          ),
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => MyApp()));
+                },
+              );
             },
-            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.white),
           ),
         ),
         body: Column(
@@ -52,15 +61,16 @@ class _PerfilPageState extends State<PerfilPage> {
                 margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 padding: EdgeInsets.only(top: 25),
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(25)),
                 child: Column(children: [
-                  Material(
-                    borderRadius: BorderRadius.circular(90),
-                    elevation: 6,
-                    child: CircleAvatar(
-                      radius: 90,
-                      backgroundImage: AssetImage("assets/logo_epet.png"),
+                  Container(
+                    width: 200,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/logo_epet.png'),
+                      ),
                     ),
                   ),
                   Container(

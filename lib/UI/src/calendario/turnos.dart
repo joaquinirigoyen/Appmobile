@@ -17,7 +17,7 @@ class _TurnosState extends State<Turnos> {
 
   create() async {
     try {
-      await firebase.collection("usuarios").doc().set({
+      await firebase.collection("turno").doc(tiempo.text).set({
         "name": name.text,
         "email": email.text,
         "fecha": fecha.text,
@@ -30,7 +30,7 @@ class _TurnosState extends State<Turnos> {
 
   update() async {
     try {
-      await firebase.collection("usuarios").doc().update({
+      await firebase.collection("turno").doc(tiempo.text).update({
         "name": name.text,
         "email": email.text,
         "fecha": fecha.text,
@@ -43,7 +43,7 @@ class _TurnosState extends State<Turnos> {
 
   delete() async {
     try {
-      await firebase.collection("User").doc().delete();
+      await firebase.collection("turno").doc(tiempo.text).delete();
     } catch (e) {
       print(e);
     }
@@ -167,18 +167,19 @@ class _TurnosState extends State<Turnos> {
                 child: SingleChildScrollView(
                   physics: ScrollPhysics(),
                   child: StreamBuilder<QuerySnapshot>(
-                      stream: firebase.collection("usuarios").snapshots(),
+                      stream: firebase.collection("turno").snapshots(),
                       builder: (context, snapshot) {
                         if (snapshot.hasData) {
                           return ListView.builder(
                               shrinkWrap: true,
                               physics: ScrollPhysics(),
+                              itemCount: snapshot.data!.docs.length,
                               itemBuilder: (context, i) {
                                 QueryDocumentSnapshot x =
                                     snapshot.data!.docs[i];
                                 return ListTile(
-                                  title: Text(x['name']),
-                                  subtitle: Text(x['email']),
+                                  title: Text(x['tiempo']),
+                                  subtitle: Text(x['fecha']),
                                 );
                               });
                         } else {

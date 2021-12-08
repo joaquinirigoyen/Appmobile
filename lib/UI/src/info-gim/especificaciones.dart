@@ -1,3 +1,4 @@
+import 'package:app_gym/UI/src/info-gim/gimnasio.dart';
 import 'package:flutter/material.dart';
 import '../paginas.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -10,8 +11,19 @@ class Especificaciones extends StatelessWidget {
         title: Center(
           child: Text("Gimnasio EPET20"),
         ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Gimnasio()));
+              },
+            );
+          },
+        ),
       ),
-      drawer: MenuLateral(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

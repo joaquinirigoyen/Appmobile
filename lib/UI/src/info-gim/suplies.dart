@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../paginas.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'gimnasio.dart';
 
 class Suplies extends StatelessWidget {
   @override
@@ -10,8 +11,19 @@ class Suplies extends StatelessWidget {
         title: Center(
           child: Text("Gimnasio EPET20"),
         ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Gimnasio()));
+              },
+            );
+          },
+        ),
       ),
-      drawer: MenuLateral(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

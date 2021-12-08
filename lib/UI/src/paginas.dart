@@ -88,10 +88,11 @@ class MenuLateral extends StatelessWidget {
             accountEmail: Text("joaquin.quiroga.epet20@gmail.com"),
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("assets/logo_epet.png"), fit: BoxFit.cover),
+                  image: AssetImage("assets/gimnasio.jpg"), fit: BoxFit.cover),
             ),
           ),
           new ListTile(
+            focusColor: Colors.lightBlue,
             leading: Icon(Icons.add_circle_outline),
             title: Text(
               "Acerca del Gimnasio",

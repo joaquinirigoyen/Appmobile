@@ -134,7 +134,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
           prefixIcon: Icon(
-            Icons.vpn_key_outlined,
+            Icons.lock_outline,
             color: Colors.black,
           ),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
@@ -160,7 +160,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         textInputAction: TextInputAction.done,
         decoration: InputDecoration(
           prefixIcon: Icon(
-            Icons.vpn_key_outlined,
+            Icons.lock_outline_rounded,
             color: Colors.black,
           ),
           contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 15),
@@ -172,7 +172,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     final signUpButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
-      color: Colors.deepPurple[400],
+      color: Colors.blue,
       child: MaterialButton(
           padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
           minWidth: MediaQuery.of(context).size.width,
@@ -203,12 +203,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Material(
-                        borderRadius: BorderRadius.circular(90),
-                        elevation: 6,
-                        child: CircleAvatar(
-                          radius: 90,
-                          backgroundImage: AssetImage("assets/logo_epet.png"),
+                      Container(
+                        width: 300,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/logo_epet.png'),
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -242,7 +243,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               child: Text(
                                 "Entrar",
                                 style: TextStyle(
-                                    color: Colors.deepPurple[400],
+                                    color: Colors.blue,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15),
                               ),
@@ -260,13 +261,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   }
 
 //funcion signUp para registrase
+
   void signUp(String email, String password) async {
     if (_formKey.currentState!.validate()) {
       try {
         await _auth
             .createUserWithEmailAndPassword(email: email, password: password)
             .then((value) => {postDetailsToFirestore()})
-            .catchError((e) {
+            .catchError((e) { 
           Fluttertoast.showToast(msg: e!.message);
         });
         //casos de errores al registrarse
