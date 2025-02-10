@@ -2,4 +2,4 @@
 
 IRIGOYEN JOAQUIN - QUIROGA BENJAMIN
 
-Se realizo en epoca de pandemia donde el objetivo era sacar turno para utilizar el gimnasio escolar.
+aplicacion creada con el objetivo de poder utilizar el gimnasio escolar mediante turnos.
